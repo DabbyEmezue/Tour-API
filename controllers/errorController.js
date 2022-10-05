@@ -28,7 +28,7 @@ const sendErrorDev = (err, res) => {
 
 const sendErrorProd = (err, res) => {
   if (err.isOperational) {
-    //Operational Errors - Errors we create ourselves
+    //Operational Errors - Errors we create ourselves testing
     res
       .status(err.statusCode)
       .json({ status: err.status, message: err.message });
